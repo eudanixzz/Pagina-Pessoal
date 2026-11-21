@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre mim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --preto: #05070d;
+    --fundo-card: #0c1220;
+    --azul: #2f7bff;
+    --azul-claro: #7db4ff;
+    --texto: #e6edf8;
+    --texto-suave: #9aa8c2;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--preto);
+    color: var(--texto);
+    line-height: 1.7;
+  }
+
+  /* ===== Topo ===== */
+  header {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(180deg, #0a1a3d 0%, var(--preto) 100%);
+    border-bottom: 2px solid var(--azul);
+  }
+
+  header h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    font-weight: 700;
+    color: var(--azul-claro);
+    text-shadow: 0 0 24px rgba(47, 123, 255, 0.5);
+  }
+
+  header p {
+    margin-top: 10px;
+    color: var(--texto-suave);
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  /* ===== Menu ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+    padding: 14px 16px;
+    background: rgba(5, 7, 13, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #17233f;
+  }
+
+  nav a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  nav a:hover,
+  nav a:focus-visible { color: var(--azul-claro); outline: none; }
+
+  /* ===== Conteúdo ===== */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  section {
+    background: var(--fundo-card);
+    border: 1px solid #17233f;
+    border-left: 4px solid var(--azul);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin-bottom: 28px;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--azul-claro);
+    margin-bottom: 12px;
+  }
+
+  section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto);
+    margin: 14px 0 4px;
+  }
+
+  section p { color: var(--texto-suave); }
+
+  section ul { padding-left: 20px; color: var(--texto-suave); }
+
+  section li { margin-bottom: 4px; }
+
+  section li::marker { color: var(--azul); }
+
+  /* ===== Imagens ===== */
+  .imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .foto {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px dashed #25407a;
+    background: #08101f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: #4d68a0;
+    font-size: 0.8rem;
+  }
+
+  /* quando você colocar uma <img> dentro da .foto, ela preenche o espaço */
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .foto:has(img) {
+    border: 2px solid var(--azul);
+    padding: 0;
+  }
+
+  .foto-grande { aspect-ratio: 16 / 9; }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 40px;
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    border-top: 1px solid #17233f;
+  }
+
+  @media (max-width: 500px) {
+    section { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+
+<header>
+  <h1>Daniel =] </h1>
+  <p>Página pessoal - Desenvolvimento - Professor Carlinhos</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre mim</a>
+  <a href="#cancoes">Canções favoritas</a>
+  <a href="#curiosidades">Curiosidades</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#filmes">Filmes e Séries</a>
+  <a href="#lugares">Lugares</a>
+  <a href="#universos">Universos</a>
+</nav>
+
+<main>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Aoba =]
+        Eu sou o Daniel, tenho 15 anos e moro em São Paulo. Sou estudante do ensino médio no Instituto J&F e minha meta é continuar crescendo nessa escola. Nessa página, você vai aprender mais sobre mim!
+    </p>
+    <div class="imagens">
+      <div class="foto foto-grande">  <img src="minha-foto.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="cancoes">
+    <h2>Canções favoritas</h2>
+    <ul>
+      <li>Always - Daniel Caesar</li>
+      <li>R U Mine? - Arctic Monkeys</li>
+      <li>Sweater Weather - The Neighbourhood</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="always.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="AM.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="tn.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="curiosidades">
+    <h2>Curiosidades</h2>
+    <ul>
+      <li>Tive meningite e fiquei em coma</li>
+      <li>Já conheci o Iberê do Manual do Mundo</li>
+      <li>Ouço muito Daniel Caesar</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="meningite.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="ibere.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="daniel-caesar.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Cozinhar</li>
+      <li>Violão</li>
+      <li>Tênis de Mesa</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="cozinhar.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="violao.jpeg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="tenis-de-mesa.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="filmes">
+    <h2>Filmes e Séries</h2>
+    <h3>Filmes favoritos</h3>
+    <ul>
+      <li>Homem-Aranha 2 (2004)</li>
+      <li>Gente Grande (2010)</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="miranha2.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="gentegrande.jpg" alt="descrição da foto"></div>
+    </div>
+    <h3>Séries favoritas</h3>
+    <ul>
+      <li>The Office (2005-2013)</li>
+      <li>Brooklyn Nine-Nine (2013-2021)</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="the-office.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="brooklyn-nine-nine.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="lugares">
+    <h2>Lugares que já visitei e quero visitar</h2>
+    <h3>Já visitei</h3>
+    <ul>
+      <li>Gramado, RS</li>
+      <li>Maraú, BA</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="gramado.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="marau.jpg" alt="descrição da foto"></div>
+    </div>
+    <h3>Quero visitar</h3>
+    <ul>
+      <li>Pisa, Itália</li>
+      <li>Lençóis Maranhenses, MA</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="pisa.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="lencois.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+  <section id="universos">
+    <h2>Universos que eu participaria</h2>
+    <ul>
+      <li>Elmore - O Incrível Mundo de Gumball</li>
+      <li>Swellview - Henry Danger</li>
+      <li>Hawkins - Stranger Things</li>
+    </ul>
+    <div class="imagens">
+      <div class="foto">  <img src="elmore.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="swellview.jpg" alt="descrição da foto"></div>
+      <div class="foto">  <img src="hawkins.jpg" alt="descrição da foto"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  🗿☕
+</footer>
+
+</body>
